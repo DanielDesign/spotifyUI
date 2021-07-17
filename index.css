@@ -19,15 +19,19 @@
   box-sizing: border-box;
 }
 
+html, body{
+  height: 100%;
+}
+
 body{
   background-color: var(--bg-color);
   color: var(--color-gray);
   line-height: 1.6;
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
-  height: 100vh;
-  min-height: 100%;
-  position: relative;
+  /* height: 100vh; */
+  /* min-height: 100%; */
+  /* position: relative; */
 }
 
 a,a:link{
@@ -143,6 +147,7 @@ a,a:link{
   border-top: 1px solid var(--bg-hover-link);
   background-color: var(--bg-footer);
   width: 100%;
+  height: 14%;
   /* display: flex;
   flex-direction: column; */
 }
