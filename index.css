@@ -7,6 +7,7 @@
   --color-gray: #b3b3b3;
   --bg-hover-link: #282828;
   --bg-footer: #181818;
+  --bg-progress-bar: #535353;
 }
 
 :root{
@@ -19,13 +20,17 @@
   box-sizing: border-box;
 }
 
+html,body{
+  height: 100%;
+}
+
 body{
   background-color: var(--bg-color);
   color: var(--color-gray);
   line-height: 1.6;
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
-  height: 100vh;
+  /* height: 100vh; */
   min-height: 100%;
   position: relative;
 }
@@ -143,8 +148,10 @@ a,a:link{
   border-top: 1px solid var(--bg-hover-link);
   background-color: var(--bg-footer);
   width: 100%;
-  /* display: flex;
-  flex-direction: column; */
+  height: 14%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .footer .wrapper-footer{
@@ -152,21 +159,89 @@ a,a:link{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-direction: row;
 }
 
-.footer .wrapper-footer div{
-  display: flex;
-  flex-direction: row;
-}
-
-.footer .wrapper-footer .wrapper-song{
-  /* min-width: 130px; */
-  /* width: 30%; */
+.footer .wrapper-footer > div{
+  display: flex; 
+  align-items: center;
 }
 
 .footer .wrapper-footer .music-favorites{
-
+  min-width: 180px;
+  width: 30%;
 }
+
+.footer .song-title{
+  display: flex;
+  flex-direction: column;
+  margin: 0 14px;
+}
+
+.footer .wrapper-icon{
+  padding: 0 8px;
+}
+
+.footer .wrapper-footer .music-controls{
+  max-width: 722px;
+  width: 40%;
+  flex-direction: column;
+}
+
+.footer .wrapper-footer .content-controls,
+.footer .wrapper-footer .line-music{
+  display: flex;
+  width: 100%;
+}
+
+.footer .wrapper-footer .content-controls{
+  margin-bottom: 14px;
+  gap: 8px;
+}
+
+.footer .wrapper-footer .content-controls .control{
+  display: flex;
+}
+
+.footer .wrapper-footer .content-controls .control.left,
+.footer .wrapper-footer .content-controls .control.right{
+  flex: 1;
+  gap: 8px;
+}
+
+.footer .wrapper-footer .content-controls .control.left{
+  justify-content: flex-end;
+}
+
+.footer .wrapper-footer .content-controls .control.center{
+  justify-content: center;
+}
+
+.footer .wrapper-footer .content-controls .control.right{
+  justify-content: flex-start;
+}
+
+.footer .wrapper-footer .line-music{
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer .wrapper-footer .line-music .progress-bar-wrapper{
+  height: 12px;
+  width: 100%;
+  background-color: var(--bg-progress-bar);
+  position: relative;
+}
+
+.footer .wrapper-footer .line-music .progress-bar-wrapper .progress-bar{
+  height: 100%;
+  width: 100%;
+}
+
+.footer .wrapper-footer .music-volume{
+  min-width: 180px;
+  width: 30%;
+  justify-content: flex-end;
+}
+
 
 
